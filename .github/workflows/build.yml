@@ -15,7 +15,8 @@ jobs:
         uses: nrwl/nx-set-shas@v2
 
       - name: install Deps
-        run: npm install
+        working-directory: ./apps/todos
+        run: yarn install
 
       - run: npx nx workspace-lint
       - run: npx nx format:check
